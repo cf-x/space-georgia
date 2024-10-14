@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*::selection {
+  background-color: black;
+  color: white;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: whitesmoke;
+}
