@@ -26,7 +26,7 @@ export default function JournalPage() {
 
     fetchMarkdown();
     const id: number = JSON.parse(slug[0]);
-    setPost(posts[id]);
+    setPost(posts[id - 1]);
   }, [slug]);
 
   return (
@@ -62,9 +62,7 @@ export default function JournalPage() {
           },
           h3: ({ children }) => {
             return (
-              <h3 className="md:text-lg my-6 font-semibold">
-                {children}
-              </h3>
+              <h3 className="md:text-lg my-6 font-semibold">{children}</h3>
             );
           },
           a: ({ children, href }) => {

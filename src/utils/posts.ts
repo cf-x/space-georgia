@@ -13,6 +13,7 @@ export interface Post {
 }
 
 export const posts: Post[] = [
+  
   {
     id: 1,
     date: "10/19/2024",
