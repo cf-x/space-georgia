@@ -31,7 +31,7 @@ export default function JournalPage() {
 
   return (
     <article className="relative px-4">
-      <div className="flex justify-between text-sm text-zinc-600">
+      <div className="flex justify-between text-sm text-zinc-400">
         <div>სერია N-{slug}</div>
         <div>{post?.date}</div>
         <div>Space-Georgia</div>
@@ -40,7 +40,7 @@ export default function JournalPage() {
       <h1 className="font-bold text-lg md:text-2xl text-center">
         {post?.title}
       </h1>
-      <div className="text-sm text-center font-zinc-300 text-zinc-800">
+      <div className="text-sm text-center font-zinc-300 text-zinc-300">
         {post?.description}
       </div>
       <div className="md:min-h-96 w-full bg-black my-8 rounded-xl flex flex-col">
@@ -55,9 +55,16 @@ export default function JournalPage() {
         components={{
           h2: ({ children }) => {
             return (
-              <h2 className="text-lg md:text-xl my-8 font-semibold">
+              <h2 className="text-lg md:text-xl my-8 font-semibold text-center">
                 {children}
               </h2>
+            );
+          },
+          h3: ({ children }) => {
+            return (
+              <h3 className="md:text-lg my-6 font-semibold">
+                {children}
+              </h3>
             );
           },
           a: ({ children, href }) => {
